@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   resources :sharks
-  root "articles#index"
+  root "sharks#index"
 end
