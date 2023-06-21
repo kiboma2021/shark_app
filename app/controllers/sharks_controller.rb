@@ -25,7 +25,7 @@ class SharksController < ApplicationController
 
     respond_to do |format|
       if @shark.save
-        format.html { redirect_to shark_url(@shark), notice: "Shark was successfully created." }
+        format.html { redirect_to sharks_url(@shark), notice: "Shark was successfully created." }
         format.json { render :show, status: :created, location: @shark }
       else
         format.html { render :new, status: :unprocessable_entity }
