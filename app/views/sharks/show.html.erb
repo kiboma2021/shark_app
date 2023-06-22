@@ -12,7 +12,11 @@
 <h2>POSTS </h2>
 
 <% for post in @shark.posts %>
- <p><%= post.comment %> </p>
+    <p><%= post.comment %> </p>
+     <p>
+      <%= link_to "Edit Post", edit_shark_post_path(@shark,post) %> |
+      <%= link_to "Delete Post", [@shark, post], method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
 <% end %>
 
-<%= link_to "Add Post", shark_posts_path(@shark) %>
+<%= link_to "Add Comment", new_shark_post_path(@shark) %>
