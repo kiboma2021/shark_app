@@ -8,3 +8,11 @@
 
   <%= button_to "Destroy this shark", @shark, method: :delete %>
 </div>
+
+<h2>POSTS </h2>
+
+<% for post in @shark.posts %>
+ <p><%= post.comment %> </p>
+<% end %>
+
+<%= link_to "Add Post", shark_posts_path(@shark) %>
