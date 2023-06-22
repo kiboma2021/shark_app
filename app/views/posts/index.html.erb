@@ -6,9 +6,11 @@
   <% @posts.each do |post| %>
     <%= render post %>
     <p>
-      <%= link_to "Show this post", post %>
+      <%= link_to "Show shark", [@shark] %> |
+      <%= link_to "Edit Post", edit_shark_post_path(@shark,post) %> |
+      <%= link_to "Destroy Post", [@shark, post], method: :delete, data: { confirm: 'Are you sure?' } %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New post", new_post_path %>
+<%= link_to "New Post", new_shark_post_path(@shark) %>
