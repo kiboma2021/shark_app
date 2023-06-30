@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   
   resources :sharks do
     resources :comments
+    resources :posts
   end
 
 end
