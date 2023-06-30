@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "stimulus": "^3.2.1"
+  }
+}
