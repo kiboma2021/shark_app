@@ -2,6 +2,9 @@
 
 <%= render @shark %>
 
+<h2>COMMENT</h2>
+<%= render 'sharks/comment' %>
+
 <div>
   <%= link_to "Edit this shark", edit_shark_path(@shark) %> |
   <%= link_to "Back to sharks", sharks_path %>
@@ -9,14 +12,7 @@
   <%= button_to "Destroy this shark", @shark, method: :delete %>
 </div>
 
-<h2>POSTS </h2>
+<div>
+  <%= render 'sharks/allcomments' %>
+</div>
 
-<% for post in @shark.posts %>
-    <p><%= post.comment %> </p>
-     <p>
-      <%= link_to "Edit Post", edit_shark_post_path(@shark,post) %> |
-      <%= link_to "Delete Post", [@shark, post], method: :delete, data: { confirm: 'Are you sure?' } %>
-    </p>
-<% end %>
-
-<%= link_to "Add Comment", new_shark_post_path(@shark) %>
