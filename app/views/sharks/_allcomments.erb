@@ -1,7 +1,10 @@
 <% for comment in @shark.comments %>
     <ul>
         <li class="comment">
-            <%= comment.body %>
+            <%= comment.comment %>
+
+            <%= button_tag "Remove Comment", data: { controller: "comments", action: "comments#remove" }  %>
+            <%= button_tag "Upvote Comment", data: { controller: "comments", action: "comments#upvote" } %>
         </li>
     </ul>
 <% end %>
