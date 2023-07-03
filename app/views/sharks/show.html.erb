@@ -12,7 +12,11 @@
   <%= button_to "Destroy this shark", @shark, method: :delete %>
 </div>
 
-<div>
-  <%= render 'sharks/allcomments' %>
+<div data-controller="comments">
+  <button button data-action="comments#showAll" > Show Older Posts</button>
+
+  <div data-target="comments.show" style="visibility:hidden" >
+    <%= render 'sharks/allcomments' %>
+  </div>
 </div>
 
