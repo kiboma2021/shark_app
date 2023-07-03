@@ -1,0 +1,11 @@
+<div data-controller="comments">
+
+    <%= form_with model: [@shark, @shark.comments.build], data: {action: "comments#addComment"} do |form| %>
+        <%= form.text_area :comment, placeholder: "Insert your comment here", data: { target: "comments.comment" } %>
+        <br>
+        <%= form.submit %>
+    <% end %>
+
+    <ul data-target="comments.add"></ul>
+
+</div>
