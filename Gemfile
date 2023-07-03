@@ -74,3 +74,4 @@ end
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.x'
+gem 'font-awesome-rails', '~>4.x'
